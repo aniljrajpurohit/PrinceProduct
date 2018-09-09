@@ -1,0 +1,246 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Prince Products</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+
+    <style>
+        .navbar-brand-text {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .dev-company {
+            color: white;
+            font-weight: bolder;
+
+        }
+
+        .social {
+            background: #b17302;
+        }
+
+        .footer-color {
+            background: #F9A602;
+            color: white !important;
+        }
+
+        .navbar-color {
+            background: #F9A602;
+        }
+
+        #copyright {
+            font-size: large;
+            background: #F9A602;
+        }
+
+        .social-icon-style {
+            padding: 10px;
+        {#background: white !important;#}
+        }
+
+        .fa-facebook {
+            color: #3b5999 !important;
+        }
+
+        .fa-twitter {
+            color: #55acee !important;
+        }
+
+        .fa-linkedin {
+            color: #0077B5 !important;
+        }
+
+        .fa-google-plus {
+            color: #dd4b39 !important;
+        }
+
+        .fa-instagram {
+            color: #e4405f !important;
+        }
+
+        .fa-pinterest {
+            color: #bd081c !important;
+        }
+
+        .contact-item a {
+            font-size: larger;
+            color: white !important;
+
+        }
+
+        .contact-item i {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .contact-title {
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        .company-desc {
+            font-size: 18px;
+        }
+    </style>
+    {% block style %}
+
+    {% endblock style %}
+</head>
+
+<body>
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-color lighten-5">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/logo.svg' %}" height="60" alt="">
+        </a>
+        <a class="navbar-brand-text" href="#">Prince Products&nbsp;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+<main>
+    {% block main %}
+
+    {% endblock main %}
+</main>
+
+<footer class="page-footer font-small   darken-3 pt-4 footer-color">
+
+    <div class="container-fluid text-center text-md-left">
+
+        <div class="row" style="padding: 20px">
+            <div class="col-md-6 mt-md-0 mt-3">
+                <h5 class="text-uppercase contact-title" style="font-weight: bolder">Prince Products</h5>
+                <p style="font-weight: bolder" class="company-desc">
+
+                    Incepted in the <u>Year of 1997</u>, Prince Products is manufacturing and trading a broad array of
+                    Liquid
+                    Cleaner, Fabric Whitener, Perfumed Hand Wash, Duster Cloth, Floor Broom and much more. In their
+                    development process, we assure that only top notch basic material is used along with ultra-modern
+                    tools and machinery. Besides this, we check these on a variety of grounds before finally shipping
+                    them at the destination of our customers. Working under the mentorship of <b><i>Mr. Jaysingh
+                    Rajpurohit</i></b>,
+                    we have acquired a reputed stature in the industry.
+
+                </p>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+
+            <div class="col-md-6 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase contact-title">Contact</h5>
+                <br><br>
+                <ul class="list-unstyled">
+                    <li class="contact-item">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        &nbsp;
+                        <a>20 A, Ganesh Peth, Dhankawadi Near Govind Halwai, Ganesh Peth,Pune India </a>
+                    </li>
+                    <br>
+                    <li class="contact-item">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;
+                        <a>customer@princeproducts.com</a>
+                    </li>
+                    <br>
+                    <li class="contact-item">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        &nbsp;
+                        &nbsp;
+
+                        <a>020 2638-2108/2107/7621</a>
+                    </li>
+                    <br>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-12 py-5 social">
+                <div class="  flex-center">
+                    <a class="fb-ic">
+                        <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x social-icon-style"> </i>
+                    </a>
+                    <a class="tw-ic">
+                        <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x social-icon-style"> </i>
+                    </a>
+                    <a class="gplus-ic">
+                        <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x social-icon-style"> </i>
+                    </a>
+                    <a class="li-ic">
+                        <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x social-icon-style"> </i>
+                    </a>
+                    <a class="ins-ic">
+                        <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x social-icon-style"> </i>
+                    </a>
+                    <a class="pin-ic">
+                        <i class="fa fa-pinterest fa-lg white-text fa-2x social-icon-style"> </i>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3" id="copyright">
+        &copy;
+        <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+        </script>
+        Designed & Maintained By <a href="http://oxvsys.com" class="dev-company">Oxvsys</a>
+    </div>
+</footer>
+
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+</body>
+
+</html>
