@@ -6,10 +6,11 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
-              filter: grayscale(100%);
+            filter: grayscale(100%);
 
         }
-    .navbar-brand {
+
+        .navbar-brand {
             height: 60px;
             width: auto;
             padding: 0 5px;
@@ -24,6 +25,7 @@
         .welcome {
             font-size: 40px;
         }
+
     </style>
 {% endblock style %}
 {% block body %}
@@ -161,15 +163,12 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
+                                    <h4>1997</h4>
                                     <h4 class="subheading">Our Humble Beginnings</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit
-                                        vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="">Inception in the year of 1997.<br> Under leadership of Mr Jaysingh
+                                        Rajpurohit</p>
                                 </div>
                             </div>
                         </li>
@@ -183,7 +182,7 @@
                                     <h4 class="subheading">An Agency is Born</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                    <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
                                         ut
                                         voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
                                         sit
@@ -191,42 +190,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="{% static 'img/about/3.jpg' %}" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit
-                                        vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="{% static 'img/about/4.jpg' %}" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit
-                                        vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
+
                         <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <h4>Be Part
@@ -240,93 +204,30 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="{% static 'img/team/1.jpg' %}" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="{% static 'img/team/2.jpg' %}" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="{% static 'img/team/3.jpg' %}" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-                        laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Clients Aside -->
     <aside class="clients">
         <div class="container">
+            <div class="text-center"><h1>Who uses our product</h1></div>
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <img src="{% static 'img/logos/envato.jpg' %}" class="img-responsive img-centered" alt="">
+                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <img src="{% static 'img/logos/designmodo.jpg' %}" class="img-responsive img-centered" alt="">
+                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <img src="{% static 'img/logos/themeforest.jpg' %}" class="img-responsive img-centered" alt="">
+                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <img src="{% static 'img/logos/creative-market.jpg' %}" class="img-responsive img-centered"
+                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered"
                              alt="">
                     </a>
                 </div>
@@ -340,7 +241,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">We would love to here from you</h3>
                 </div>
             </div>
             <div class="row">
@@ -389,15 +290,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                    <span class="copyright">Copyright &copy; Prince Product
+                        <script>document.write(new Date().getFullYear());</script>
+                    </span>
+                    <br>
+                    <span>Made with love by <a href="http://oxvsys.com"><b>Oxvsys</b></a></span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="mailto:princeproducts69@gmail.com"><i class="fa fa-envelope"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://instagram.com/princeproductspune/"><i class="fa fa-instagram"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="https://www.facebook.com/princeproductspune"><i class="fa fa-facebook"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -426,30 +331,22 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2>Product Name</h2>
+                                <p class="item-intro ">Sub Decription</p>
                                 <img class="img-responsive img-centered"
                                      src="{% static 'img/portfolio/roundicons-free.jpg' %}" alt="">
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
                                     nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60
-                                    of
-                                    them for free, courtesy of <a
-                                        href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>,
-                                    or you can purchase the 1500 icon set <a
-                                        href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.
-                                </p>
+
                                 <ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
+                                    <li>Name:Unknow</li>
+                                    <li>Price:500 Rs</li>
+                                    <li>Category: Cleansing</li>
                                 </ul>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i
-                                        class="fa fa-times"></i> Close Project
+                                        class="fa fa-times"></i> Close Product list
                                 </button>
                             </div>
                         </div>
