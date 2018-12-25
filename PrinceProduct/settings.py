@@ -52,7 +52,7 @@ ROOT_URLCONF = 'PrinceProduct.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Home/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'Home/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
