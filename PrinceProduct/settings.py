@@ -24,7 +24,7 @@ SECRET_KEY = 'k#2%7xd6+ac^47@(+1o4#6xna5ivn+gg950l%s3co7e+^thh_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'rsniper.pythonanywhere.com']
 
 # Application definition
 
@@ -115,9 +115,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/assets/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "assets"),
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL = '/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
