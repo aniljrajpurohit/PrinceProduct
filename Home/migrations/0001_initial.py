@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=256)),
                 ('description', models.TextField()),
                 ('position', models.IntegerField()),
-                ('thumbnail', models.ImageField(upload_to='media/category/')),
+                ('thumbnail', models.ImageField(upload_to='Media/category/')),
             ],
         ),
         migrations.CreateModel(
