@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=256)),
                 ('description', models.TextField()),
                 ('position', models.IntegerField()),
-                ('thumbnail', models.ImageField(upload_to='Media/category/')),
+                ('thumbnail', models.ImageField(upload_to='Media/Category/')),
             ],
         ),
         migrations.CreateModel(
@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField()),
                 ('position', models.IntegerField()),
                 ('price', models.IntegerField(blank=True, null=True)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Home.Category')),
+                ('Category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Home.Category')),
             ],
         ),
     ]

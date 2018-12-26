@@ -4,7 +4,7 @@ from . import utils
 upload_path_images = 'Media/images/'
 
 
-# upload_path_category = 'Media/category/'
+# upload_path_category = 'Media/Category/'
 
 
 def category_icon_path(instance, filename):
@@ -13,7 +13,7 @@ def category_icon_path(instance, filename):
     test = instance.name
     name = ''.join(e for e in test if e.isalnum())
     # print(name)
-    return 'Media/Categories/{0}/{1}.{2}'.format(name, name, extension)
+    return 'Media/Category/{0}/{1}.{2}'.format(name, name, extension)
 
 
 def product_media_path(instance, filename):

@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
+            name='Category',
             options={'ordering': ['position']},
         ),
         migrations.AddField(
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             field=models.ImageField(null=True, upload_to=Home.models.product_media_path),
         ),
         migrations.AlterField(
-            model_name='category',
+            model_name='Category',
             name='thumbnail',
             field=models.ImageField(upload_to=Home.models.category_icon_path),
         ),
