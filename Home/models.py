@@ -43,4 +43,4 @@ class Product(models.Model):
     description = models.TextField()
     position = models.IntegerField()
     price = models.IntegerField(blank=True, null=True)
-    image = models.ImageField(upload_to=product_media_path())
+    image = models.ImageField(upload_to=product_media_path, null=True)
