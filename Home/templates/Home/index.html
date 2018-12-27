@@ -38,6 +38,32 @@
         .address {
             padding: 10px;
         }
+
+        .navbar-custom .navbar-toggle {
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .navbar-custom {
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(253, 200, 48, 1)), to(rgba(243, 115, 53, 1)));
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            .navbar-brand {
+                padding: 10px;
+            }
+            .welcome{
+                font-size: 20px;
+            }
+            header .intro-text .intro-heading{
+                font-size: 30px;
+            }
+            header .container{
+                 margin: 60px 0;
+            }
+        }
+
     </style>
 {% endblock style %}
 {% block body %}
@@ -47,7 +73,7 @@
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
                 </button>
                 <img src="{% static 'img/logo.svg' %}" class="navbar-brand page-scroll" href="#page-top" alt="">
             </div>
@@ -65,9 +91,6 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
-                    {#                    <li>#}
-                    {#                        <a class="page-scroll" href="#team">Team</a>#}
-                    {#                    </li>#}
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
