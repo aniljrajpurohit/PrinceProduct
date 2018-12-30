@@ -53,17 +53,39 @@
             .navbar-brand {
                 padding: 10px;
             }
-            .welcome{
+
+            .welcome {
                 font-size: 20px;
             }
-            header .intro-text .intro-heading{
+
+            header .intro-text .intro-heading {
                 font-size: 30px;
             }
-            header .container{
-                 margin: 60px 0;
+
+            header .container {
+                margin: 60px 0;
             }
+
+            .address-block-font {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .white {
+                font-size: 20px;
+            }
+
+
         }
 
+        #map {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(253, 200, 48, 0.8)), to(rgba(243, 115, 53, 0.8)));
+            filter: saturate(50%);
+            width: 100%;
+            height: 300px;
+        }
     </style>
 {% endblock style %}
 {% block body %}
@@ -99,7 +121,6 @@
         </div>
     </nav>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
@@ -110,7 +131,6 @@
         </div>
     </header>
 
-    <!-- Services Section -->
     <section id="principle">
         <div class="container">
             <div class="row">
@@ -180,15 +200,32 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">About Us</h2>
+                    <div>
+                        <p style="font-size: 1.9rem;text-align: justify">Started in the year of <b>1997</b>, <b>Prince
+                            Products</b> is  an ISO
+                            certified
+                            manufacturing and trading Company with a broad Range of Liquid Cleaner, Fabric Whitener,
+                            Perfumed Hand Wash, Dish Wash ,Cleaning Powders and much more.
+                        </p>
+                        <p style="font-size: 1.9rem;text-align: justify">
+                            In their development
+                            process, we assure that only top notch basic material is used along with ultra-modern
+                            tools and machinery. Besides this, we check these on a variety of grounds before finally
+                            giving them at the destination of our customers. Working under the mentor ship of <b> Mr.Jaysingh
+                            Rajpurohit</b>
+                            , we have acquired a reputed stature in the industry.
+                        </p>
+                    </div>
                 </div>
             </div>
+            <!--About us section time line-->
+            <!--
+
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
@@ -234,12 +271,13 @@
                             </div>
                         </li>
                     </ul>
+
                 </div>
             </div>
+            -->
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -252,15 +290,22 @@
                 <div class="row address">
                     <div class="col-lg-6">
                         <h2 class="white">Company OUTLET</h2>
-                        <div class="white-addr">638,Gansesh Peth ,Near Govind Halwai Chowck Pune:-411002 <br>
+                        <div class="white-addr address-block-font">638,Gansesh Peth ,Near Govind Halwai Chowck
+                            Pune:-411002 <br>
                             <b><a href="tel:+91-9850766569">+91-9850766569</a></b>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <h2 class="white">Zonal Office</h2>
-                        <div class="white-addr">20/A Ganesh Peth: Pune:-411002 <br>
+                        <div class="white-addr address-block-font">20/A Ganesh Peth: Pune:-411002 <br>
                             <b><a href="tel:020-26382108">020-26382108</a></b>
                         </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <iframe
+                                id="map"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.368359030093!2d73.86239!3d18.513437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d0170e9684819b2!2sPRINCE+PRODUCTS!5e0!3m2!1sen!2sin!4v1546192250951"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <hr>
