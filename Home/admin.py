@@ -4,8 +4,13 @@ from django.contrib import admin
 from .models import *
 
 
+class ProductInline(admin.StackedInline):
+    model = Product
+
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'thumbnail', 'position']
+    inlines = [ProductInline]
 
     class Meta:
         model = Category

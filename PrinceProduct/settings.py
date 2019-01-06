@@ -24,7 +24,7 @@ SECRET_KEY = 'k#2%7xd6+ac^47@(+1o4#6xna5ivn+gg950l%s3co7e+^thh_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'rsniper.pythonanywhere.com', '192.168.0.3']
+ALLOWED_HOSTS = ['127.0.0.1', 'rsniper.pythonanywhere.com', '192.168.0.3', '*']
 
 # Application definition
 
