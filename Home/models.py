@@ -47,7 +47,7 @@ class Product(models.Model):
     position = models.IntegerField()
     price = models.IntegerField(blank=True, null=True)
     image = models.ImageField(upload_to=product_media_path, null=True)
-    amazon_url = models.CharField(max_length=1000, default="")
+    amazon_url = models.CharField(max_length=1000, default="", null=True,blank=True)
 
     class Meta:
         ordering = ['position']
