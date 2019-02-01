@@ -11,7 +11,7 @@
         }
 
         .navbar-brand {
-            height: 60px;
+            height: 70px;
             width: auto;
             padding: 0 5px;
         }
@@ -26,6 +26,114 @@
             font-size: 40px;
         }
 
+        .white-addr {
+            color: white;
+        {#padding: 10px;#} font-size: 1.9rem;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .address {
+            padding: 10px;
+        }
+
+        .navbar-custom .navbar-toggle {
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .navbar-custom {
+            padding: 4px;
+        {#background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(253, 200, 48, 1)), to(rgba(243, 115, 53, 1)));#} background: rgba(0, 0, 0, 0);
+        }
+
+        .navbar-custom {
+        }
+
+
+        #map {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(253, 200, 48, 0.8)), to(rgba(243, 115, 53, 0.8)));
+            filter: saturate(50%);
+            width: 100%;
+            height: 300px;
+        }
+
+        .foot-color {
+            color: #F37335;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            .navbar-brand {
+                padding: 10px;
+            }
+
+            .welcome {
+                font-size: 20px;
+            }
+
+            header .intro-text .intro-heading {
+                font-size: 30px;
+            }
+
+            header .container {
+                margin: 60px 0;
+            }
+
+            .address-block-font {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .white {
+                font-size: 20px;
+            }
+
+
+        }
+
+        .affix {
+        {#background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(253, 200, 48, 1)), to(rgba(243, 115, 53, 1)));#} background-color: black;
+        }
+
+        .affix-top {
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(253, 200, 48, 1)), to(rgba(243, 115, 53, 1)));
+        }
+
+        .navbar-nav {
+            margin-top: 11px;
+        }
+
+        .navbar-custom.affix {
+            padding: 0 0;
+        }
+
+        .fix_image_product {
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+        }
+
+        .material {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .outer {
+            margin: 0 5px;
+        }
+
+        .col-sm-3 {
+            margin: 0 10px;
+        }
+
+        .make-bold {
+            font-weight: bold;
+        }
     </style>
 {% endblock style %}
 {% block body %}
@@ -35,7 +143,7 @@
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
                 </button>
                 <img src="{% static 'img/logo.svg' %}" class="navbar-brand page-scroll" href="#page-top" alt="">
             </div>
@@ -53,9 +161,6 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
-{#                    <li>#}
-{#                        <a class="page-scroll" href="#team">Team</a>#}
-{#                    </li>#}
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
@@ -64,7 +169,6 @@
         </div>
     </nav>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
@@ -75,7 +179,6 @@
         </div>
     </header>
 
-    <!-- Services Section -->
     <section id="principle">
         <div class="container">
             <div class="row">
@@ -125,7 +228,8 @@
                 {% for category in categories %}
 
                     <div class="col-md-3 col-sm-6 col-xs-6 portfolio-item">
-                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"
+                           onclick="get_category_data_from_position({{ forloop.counter0 }})">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                     <i class="fa fa-plus fa-3x"></i>
@@ -145,15 +249,32 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">About Us</h2>
+                    <div>
+                        <p style="font-size: 1.9rem;text-align: justify">Started in the year of <b>1997</b>, <b>Prince
+                            Products</b> is  an ISO
+                            certified
+                            manufacturing and trading Company with a broad Range of Liquid Cleaner, Fabric Whitener,
+                            Perfumed Hand Wash, Dish Wash ,Cleaning Powders and much more.
+                        </p>
+                        <p style="font-size: 1.9rem;text-align: justify">
+                            In their development
+                            process, we assure that only top notch basic material is used along with ultra-modern
+                            tools and machinery. Besides this, we check these on a variety of grounds before finally
+                            giving them at the destination of our customers. Working under the mentor ship of <b> Mr.Jaysingh
+                            Rajpurohit</b>
+                            , we have acquired a reputed stature in the industry.
+                        </p>
+                    </div>
                 </div>
             </div>
+            <!--About us section time line-->
+            <!--
+
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
@@ -199,53 +320,46 @@
                             </div>
                         </li>
                     </ul>
+
                 </div>
             </div>
+            -->
         </div>
     </section>
 
-
-    <!-- Clients Aside -->
-{#    <aside class="clients">#}
-{#        <div class="container">#}
-{#            <div class="text-center"><h1>Who uses our product</h1></div>#}
-{#            <div class="row">#}
-{#                <div class="col-md-3 col-sm-6">#}
-{#                    <a href="#">#}
-{#                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered" alt="">#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 col-sm-6">#}
-{#                    <a href="#">#}
-{#                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered" alt="">#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 col-sm-6">#}
-{#                    <a href="#">#}
-{#                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered" alt="">#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 col-sm-6">#}
-{#                    <a href="#">#}
-{#                        <img src="{% static 'img/logos/images.png' %}" class="img-responsive img-centered"#}
-{#                             alt="">#}
-{#                    </a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </aside>#}
-
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">We would love to here from you</h3>
+                    <h3 class="text-muted" style="color: white;font-size: 1.5rem">We would love to here from you</h3>
                 </div>
             </div>
             <div class="row">
+                <div class="row address">
+                    <div class="col-lg-6">
+                        <h2 class="white">Company OUTLET</h2>
+                        <div class="white-addr address-block-font">638,Gansesh Peth ,Near Govind Halwai Chowck
+                            Pune:-411002 <br>
+                            <b><a href="tel:+91-9850766569">+91-9850766569</a></b>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="white">Zonal Office</h2>
+                        <div class="white-addr address-block-font">20/A Ganesh Peth: Pune:-411002 <br>
+                            <b><a href="tel:020-26382108">020-26382108</a></b>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <iframe
+                                id="map"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.368359030093!2d73.86239!3d18.513437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d0170e9684819b2!2sPRINCE+PRODUCTS!5e0!3m2!1sen!2sin!4v1546192250951"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <hr>
                 <div class="col-lg-12">
+                    <h2 class="white text-center" style="margin: 30px 0">Send a query</h2>
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
@@ -294,7 +408,7 @@
                         <script>document.write(new Date().getFullYear());</script>
                     </span>
                     <br>
-                    <span>Made with love by <a href="http://oxvsys.com"><b>Oxvsys</b></a></span>
+                    <span>Made with love by <a href="http://oxvsys.com"><b class="foot-color">Oxvsys</b></a></span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -308,9 +422,9 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li><a href="#" class="foot-color">Privacy Policy</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a href="#" class="foot-color">Terms of Use</a>
                         </li>
                     </ul>
                 </div>
@@ -333,21 +447,20 @@
                             <div class="modal-body">
                                 <h2>Product Name</h2>
                                 <p class="item-intro ">Sub Decription</p>
-                                <img class="img-responsive img-centered"
-                                     src="{% static 'img/portfolio/roundicons-free.jpg' %}" alt="">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                    nostrum, reiciendis facere nemo!</p>
 
-                                <ul class="list-inline">
-                                    <li>Name:Unknow</li>
-                                    <li>Price:500 Rs</li>
-                                    <li>Category: Cleansing</li>
-                                </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i
-                                        class="fa fa-times"></i> Close Product list
-                                </button>
+                                {#                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur#}
+                                {#                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt#}
+                                {#                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,#}
+                                {#                                    nostrum, reiciendis facere nemo!</p>#}
+                                {##}
+                                {#                                <ul class="list-inline">#}
+                                {#                                    <li>Name:Unknow</li>#}
+                                {#                                    <li>Price:500 Rs</li>#}
+                                {#                                    <li>Category: Cleansing</li>#}
+                                {#                                </ul>#}
+
+                                <div id="product-list"></div>
+
                             </div>
                         </div>
                     </div>
@@ -355,6 +468,81 @@
             </div>
         </div>
     </div>
+    <script>
+        var product_data = [
+            {% for category in categories %}
+                [
+                    {% for product in category.product_set.all %}
+                        {
+                            "name": "{{ product.name }}",
+                            "description": "{{ product.description }}",
+                            "price": "{{ product.price }}",
+                            "amazon_url": "{{ product.amazon_url }}",
+                            "image": "{{ product.image}}",
+                        },
+                    {% endfor %}
+                ],
+            {% endfor %}
+        ]
+    </script>
+
+    <script>
+        function get_category_data_from_position(postion) {
+            let product_list = document.getElementById('product-list');
+            {#Removes nodes from product list and faster than innerhtml#}
+            while (product_list.firstChild) {
+                product_list.removeChild(product_list.firstChild);
+            }
+            var row = document.createElement('div');
 
 
+            {#Outer most div#}
+            let outer = document.createElement('div');
+            outer.setAttribute('class', 'outer');
+            for (let product_pos in product_data[postion]) {
+
+
+                let div_class_col_md = document.createElement('div');
+                div_class_col_md.setAttribute('class', 'col-sm-3 material');
+
+                let name = document.createElement('h4');
+                name.innerText = product_data[postion][product_pos]['name'];
+
+                let image = document.createElement('img');
+                image.setAttribute('src', product_data[postion][product_pos]['image']);
+                image.setAttribute('class', 'fix_image_product');
+
+                let description = document.createElement('span');
+                description.innerHTML = product_data[postion][product_pos]['description'];
+                description.setAttribute('class', 'make-bold');
+
+                let price = document.createElement('span');
+                price.innerHTML = product_data[postion][product_pos]['price'] + " ₹";
+                price.setAttribute('class', 'make-bold');
+
+                let amazon_url = document.createElement('a');
+                amazon_url.setAttribute('href', product_data[postion][product_pos]['amazon_url']);
+                amazon_url.innerText = 'See on Amazon';
+                description.setAttribute('class', 'make-bold');
+
+
+                div_class_col_md.appendChild(name);
+                div_class_col_md.appendChild(image);
+                div_class_col_md.appendChild(description);
+                div_class_col_md.appendChild(document.createElement('br'));
+                div_class_col_md.appendChild(price);
+                div_class_col_md.appendChild(document.createElement('br'));
+                div_class_col_md.appendChild(amazon_url);
+
+                outer.appendChild(div_class_col_md);
+
+
+            }
+            row.appendChild(outer);
+            product_list.appendChild(row);
+        }
+    </script>
 {% endblock body %}
+{% block script %}
+
+{% endblock script %}
