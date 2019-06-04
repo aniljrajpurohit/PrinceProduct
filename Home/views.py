@@ -4,7 +4,7 @@ from Home.models import Category
 import copy
 
 def home(request):
-    categories = Category.objects.all().order_by('pk')
+    categories = Category.objects.all().order_by('position')
     product_data = []
     for each_categoty in categories:
         temp = []
