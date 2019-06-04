@@ -469,21 +469,7 @@
         </div>
     </div>
     <script>
-        var product_data = [
-            {% for category in categories %}
-                [
-                    {% for product in category.product_set.all %}
-                        {
-                            "name": "{{ product.name }}",
-                            "description": "{{ product.description }}",
-                            "price": "{{ product.price }}",
-                            "amazon_url": "{{ product.amazon_url }}",
-                            "image": "{{ product.image}}",
-                        },
-                    {% endfor %}
-                ],
-            {% endfor %}
-        ]
+        var product_data = {{product_data|safe}}
     </script>
 
     <script>
