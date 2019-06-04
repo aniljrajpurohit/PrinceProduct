@@ -18,3 +18,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product)
+
+
+def home(*args, **kwargs):
+    pass
