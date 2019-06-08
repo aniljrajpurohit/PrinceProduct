@@ -25,7 +25,7 @@ def home(request):
 
 def query(request):
     if request.method == 'POST':
-        print(request.POST)
+        # print(request.POST)
         user_name = request.POST.get('name')
         user_mail = request.POST.get('email')
         user_msg = request.POST.get('message')
