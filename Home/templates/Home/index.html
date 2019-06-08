@@ -3,7 +3,7 @@
 {% block style %}
     <style>
         .thumb-nail {
-            width: 200px;
+            width: 100%;
             height: 200px;
             object-fit: cover;
             filter: grayscale(100%);
@@ -67,6 +67,10 @@
         }
 
         @media only screen and (max-width: 480px) {
+            .portfolio-caption {
+                margin-bottom: 4rem;
+            }
+
             .cat-name {
                 font-size: small;
             }
@@ -231,7 +235,7 @@
 
                 {% for category in categories %}
 
-                    <div class="col-md-3 col-sm-6 col-xs-6 portfolio-item">
+                    <div class="col-md-3 col-sm-12 col-xs-12 portfolio-item" style="max-width: 100%">
                         <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"
                            onclick="get_category_data_from_position({{ forloop.counter0 }})">
                             <div class="portfolio-hover">
@@ -243,10 +247,9 @@
                         </a>
                         <div class="portfolio-caption">
                             <h4 class="cat-name">{{ category.name }}</h4>
-                            <p class="text-muted" style="max-height: 24px">{{ category.description }}</p>
+                            <p class="text-muted">{{ category.description }}</p>
                         </div>
                     </div>
-
                 {% endfor %}
 
             </div>
@@ -365,6 +368,7 @@
                 <div class="col-lg-12">
                     <h2 class="white text-center" style="margin: 30px 0">Send a query</h2>
                     <form name="sentMessage" id="contactForm" novalidate>
+                        {#                        {% csrf_token %}#}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -473,8 +477,7 @@
         </div>
     </div>
     <script>
-        var product_data =
-        {{product_data|safe}}
+        var product_data ={{product_data|safe}};
     </script>
 
     <script>
@@ -533,6 +536,7 @@
             product_list.appendChild(row);
         }
     </script>
+
 {% endblock body %}
 {% block script %}
 
